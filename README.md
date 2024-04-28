@@ -1,20 +1,6 @@
-**Git Manual**
+# Git Manual
 
-**Installation**
-
-**Setting up user name**
-
-git config user.name => Check what is the currently set user name.
-git config --global user.name "User-Name" => Set up a new user name.
-note: if there is an existing user name, there is no need to delete it, simply add a new one. 
-note: use the same user name as the GitHub profile you will be using.
-
-**Setting up email:**
-
-git config user.email => Check what is the currently set email.
-git config --global user.email email@example.com => Set up a new user name.
-note: if there is an existing email, there is no need to delete it, simply add a new one. 
-note: use the same email as the GitHub profile you will be using.
+# Everyday Use
 
 **Initialising Repositories**
 
@@ -31,12 +17,29 @@ Note: Check if files are added using git status command
 
 git commit -m "message" => to commit changes, using our own message (to skip the text editor)
 
-**GitHub**
+**Cloning Existing GitHub Repo**
 
-**Cloning GitHub Repos using Git**
+Cloning GitHub Repos using Git
 
-git clone <URL> => clones a repo into a current directory and initializes it as a repository.
+git clone <URL> => clones a repo into a current directory and initializes it as a git repository.
 
+# Installation Manual
+
+**Setting up user name**
+
+git config user.name => Check what is the currently set user name.
+git config --global user.name "User-Name" => Set up a new user name.
+note: if there is an existing user name, there is no need to delete it, simply add a new one. 
+note: use the same user name as the GitHub profile you will be using.
+
+**Setting up email:**
+
+git config user.email => Check what is the currently set email.
+git config --global user.email email@example.com => Set up a new user name.
+note: if there is an existing email, there is no need to delete it, simply add a new one. 
+note: use the same email as the GitHub profile you will be using.
+
+**GitHub Configuration**
 
 **SSH Config**
 
@@ -49,7 +52,6 @@ Check the directory listing to see if you already have a public SSH key. By defa
     id_rsa.pub
     id_ecdsa.pub
     id_ed25519.pub
-
 
 **Generating a new SSH key and adding it to the ssh-agent**
 
