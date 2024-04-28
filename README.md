@@ -51,8 +51,67 @@ Check the directory listing to see if you already have a public SSH key. By defa
     id_ed25519.pub
 
 
-Generating a new SSH key and adding it to the ssh-agent
+**Generating a new SSH key and adding it to the ssh-agent**
 
 After you've checked for existing SSH keys, you can generate a new SSH key to use for authentication, then add it to the ssh-agent.
+
+Open Terminal.
+
+Paste the text below, replacing the email used in the example with your GitHub email address.
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+Note: If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
+
+ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+ When you're prompted to "Enter a file in which to save the key", you can press Enter to accept the default file location. Please note that if you created SSH keys previously, ssh-keygen may ask you to rewrite another key, in which case we recommend creating a custom-named SSH key. To do so, type the default file location and replace id_ALGORITHM with your custom key name.
+
+At the prompt, type a secure passphrase. For more information, see "Working with SSH key passphrases."
+
+**Adding your SSH key to the ssh-agent**
+
+Start the ssh-agent in the background.
+
+eval "$(ssh-agent -s)" => to start the agent
+> Agent pid 59566 => this should be output if successful
+
+Add your SSH private key to the ssh-agent.
+
+If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_ed25519 in the command with the name of your private key file.
+
+ssh-add ~/.ssh/id_ed25519
+
+**Adding a new SSH key to your GitHub account**
+
+Add the SSH public key to your account on GitHub. : https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
+Copy the SSH public key to your clipboard.
+
+If your SSH public key file has a different name than the example code, modify the filename to match your current setup. When copying your key, don't add any new lines or whitespace.
+
+cat ~/.ssh/id_ed25519.pub
+Then select and copy the contents of the id_ed25519.pub file
+displayed in the terminal to your clipboard
+
+Now go to the GitHub account: 
+
+In the upper-right corner of any page, click your profile photo, then click Settings.
+
+In the "Access" section of the sidebar, click SSH and GPG keys.
+
+Click New SSH key or Add SSH key.
+
+In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key "Personal laptop".
+
+Select the type of key, either authentication or signing. For more information about commit signing, see "About commit signature verification."
+
+In the "Key" field, paste your public key.
+
+Click Add SSH key.
+
+If prompted, confirm access to your account on GitHub. For more information, see "Sudo mode."
+
+
 
 
