@@ -1,4 +1,4 @@
-# Git Manual
+cd # Git Manual
 
 # Everyday Use
 
@@ -30,6 +30,16 @@ Step 1: Create an empty repository on GitHub!
 Step 2: Create a git repository on your local machine!
 
 Step 3: Connect the 2 repos, using remote!
+      
+    Git Remote commands: 
+
+    git remote -v => Lists all existing remotes in a repository.
+    note: in the empty git repo we created there will be no output after we run this command, 
+    because we still did not set up the remote!
+
+    git remote add <name> <SSH> => command to create a new remote.
+    note: standard name for remote is "origin"
+    in <SSH> we paste the SSH key of our empty GitHub repo we want to connect.
 
 Step 4: check if we made remote using git remote -v!
 
@@ -50,16 +60,6 @@ Step 5: Move all the files you want into the git repo we created, using mv comma
     cd /path/to/your/local/git/repo
     ls
 
-
-Git Remote commands: 
-
-git remote -v => Lists all existing remotes in a repository.
-note: in the empty git repo we created there will be no output after we run this command, 
-because we still did not set up the remote!
-
-git remote add <name> <URL> => command to create a new remote.
-note: standard name for remote is "origin"
-in <URL> we paste the url of our empty GitHub repo we want to connect.
 
 # Installation Manual
 
