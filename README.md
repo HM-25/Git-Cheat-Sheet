@@ -1,4 +1,4 @@
-cd # Git Manual
+# Git Manual
 
 # Everyday Use
 
