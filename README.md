@@ -31,9 +31,35 @@ Step 2: Create a git repository on your local machine!
 
 Step 3: Connect the 2 repos, using remote!
 
+Step 4: check if we made remote using git remote -v!
+
+Step 5: Move all the files you want into the git repo we created, using mv command:
+    Navigate to your website directory: Use the cd command to navigate to the directory where your website files are located.
+    For example:
+
+    cd /path/to/your/website/directory
+
+    Move the files: Use the mv command to move all the files from your website directory to your local Git repository     directory.   For example, if your Git repository is located on your desktop, you can move the files like this:
+
+    mv * /path/to/your/local/git/repo
+
+    This command will move all files (excluding hidden files) from your website directory to your local Git repository directory.
+
+    Verify the files: Navigate to your local Git repository directory and verify that the website files are there:
+
+    cd /path/to/your/local/git/repo
+    ls
+
+
 Git Remote commands: 
 
 git remote -v => Lists all existing remotes in a repository.
+note: in the empty git repo we created there will be no output after we run this command, 
+because we still did not set up the remote!
+
+git remote add <name> <URL> => command to create a new remote.
+note: standard name for remote is "origin"
+in <URL> we paste the url of our empty GitHub repo we want to connect.
 
 # Installation Manual
 
