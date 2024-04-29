@@ -23,6 +23,18 @@ Cloning GitHub Repos using Git
 
 git clone <URL> => clones a repo into a current directory and initializes it as a git repository.
 
+**Uploading Existing Project to GitHub**
+
+Step 1: Create an empty repository on GitHub!
+
+Step 2: Create a git repository on your local machine!
+
+Step 3: Connect the 2 repos, using remote!
+
+Git Remote commands: 
+
+git remote -v => Lists all existing remotes in a repository.
+
 # Installation Manual
 
 **Setting up user name**
@@ -112,7 +124,7 @@ In the "Key" field, paste your public key.
 
 Click Add SSH key.
 
-If prompted, confirm access to your account on GitHub. For more information, see "Sudo mode."
+If prompted, confirm access to your account on GitHub.
 
 
 
