@@ -60,6 +60,11 @@ Step 5: Move all the files you want into the git repo we created, using mv comma
     cd /path/to/your/local/git/repo
     ls
 
+Step 6: Push the changes! 
+
+git push <name> master => command to push the changes
+
+<name> = name that we gave making remote! Usually Origin!
 
 # Installation Manual
 
